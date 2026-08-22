@@ -375,6 +375,18 @@ footer {
   .btn { width: 100%; text-align: center; }
   .header-inner { flex-wrap: wrap; height: auto; padding: .75rem 4%; }
   .site-title { font-size: 0.95rem; }
-  table.fixtures th, table.fixtures td { padding: 8px 10px; font-size: 0.8rem; }
-  .fixture-table-wrap { border-radius: 0; margin: 1rem -4%; }
+  
+  /* Mobile table: show all columns, shrink where needed */
+  table.fixtures { font-size: 0.75rem; }
+  table.fixtures th, table.fixtures td { padding: 6px 4px; text-align: left; }
+  table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { min-width: 50px; } /* WC */
+  table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { min-width: 40px; } /* Cups */
+  table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { min-width: 35px; } /* Week */
+  table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { min-width: 85px; } /* Date */
+  table.fixtures th:nth-child(5), table.fixtures td:nth-child(5) { min-width: 50px; } /* H/A */
+  table.fixtures th:nth-child(6), table.fixtures td:nth-child(6) { min-width: 80px; } /* Opposition */
+  table.fixtures th:nth-child(7), table.fixtures td:nth-child(7) { min-width: 60px; } /* Venue */
+  table.fixtures th:nth-child(8), table.fixtures td:nth-child(8) { min-width: 45px; } /* Time */
+  
+  .fixture-table-wrap { overflow-x: auto; border-radius: 0; margin: 1rem -4%; }
 }
