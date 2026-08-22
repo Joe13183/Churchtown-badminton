@@ -1,2 +1,6 @@
 /*
   Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+  X-UA-Compatible: IE=edge
+
+/teams/*
+  Cache-Control: max-age=0, no-cache, no-store, must-revalidate
