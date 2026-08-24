@@ -155,8 +155,8 @@ a:hover { text-decoration: underline; }
   margin-bottom: 1.5rem;
 }
 .page-title-wrapper img {
-  height: 75px;
-  width: 75px;
+  height: 85px;
+  width: 85px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -237,7 +237,7 @@ table.fixtures th {
 }
 table.fixtures tbody tr:nth-child(even) { background: var(--green-light); }
 table.fixtures tbody tr:hover { background: #c3e6cb; }
-table.fixtures td { padding: 11px 16px; border-bottom: 1px solid var(--grey-light); }
+table.fixtures td { padding: 11px 16px; border-bottom: 1px solid var(--grey-light); color: var(--grey-dark); }
 
 /* Fixture status badges */
 .badge {
