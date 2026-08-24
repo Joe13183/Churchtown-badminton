@@ -58,12 +58,14 @@ a:hover { text-decoration: underline; }
   position: sticky; top: 0; z-index: 100;
 }
 .header-inner {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 4%;
   height: 70px;
 }
-.logo-link { display: flex; align-items: center; gap: 12px; }
-.logo-img { height: 44px; width: 44px; object-fit: contain; }
+.logo-link { display: none; }
+.logo-img { height: 80px; width: 80px; object-fit: contain; }
 .site-title {
   color: var(--white);
   font-size: 1.05rem;
@@ -144,6 +146,23 @@ a:hover { text-decoration: underline; }
 .btn-primary { background: var(--green-accent); color: var(--white); }
 .btn-secondary { background: rgba(255,255,255,.15); color: var(--white); border: 2px solid rgba(255,255,255,.4); }
 .btn-secondary:hover { background: rgba(255,255,255,.25); }
+
+/* Page title with logo */
+.page-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.page-title-wrapper img {
+  height: 75px;
+  width: 75px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.page-title-wrapper h1 {
+  margin: 0;
+}
 
 /* ═══════════════════════════════════════════
    SECTIONS
