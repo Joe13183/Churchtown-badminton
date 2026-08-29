@@ -411,13 +411,13 @@ footer {
 }
 
 /* Match Week and Venue column adjustments */
-table.fixtures th:nth-child(2),
-table.fixtures td:nth-child(2) {
-  width: 4%;
+table.fixtures th.match-week,
+table.fixtures td.match-week {
+  width: 8%;
   white-space: normal;
   word-break: break-word;
 }
-table.fixtures th:nth-child(6),
-table.fixtures td:nth-child(6) {
+table.fixtures th.venue,
+table.fixtures td.venue {
   width: 22%;
 }
