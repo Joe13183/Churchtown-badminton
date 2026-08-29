@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPL Analysis — Daily Briefing</title>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --fg: #00ff41;
+    --muted: #888;
+    --accent: #ff2a6d;
+    --card: #111;
+    --border: #222;
+    --glow: rgba(0, 255, 65, 0.15);
+    font-family: 'Courier New', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.15) 2px,
+      rgba(0,0,0,0.15) 4px
+    );
+    pointer-events: none;
+    z-index: 999;
+  }
+  h1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--fg);
+    text-shadow: 0 0 10px var(--glow), 0 0 20px var(--glow);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: var(--accent);
+    font-size: 1.2em;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 3px solid var(--accent);
+    padding-left: 10px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.85em;
+    margin-bottom: 25px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 0 15px rgba(0,255,65,0.05);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9em;
+  }
+  th {
+    color: var(--accent);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+  }
+  tr:hover { background: rgba(0,255,65,0.03); }
+  .good { color: var(--fg); }
+  .warn { color: #ffa500; }
+  .bad { color: var(--accent); }
+  .footer {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.75em;
+    text-align: center;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  .nav { margin-bottom: 20px; }
+  .nav a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+  .nav a:hover { background: rgba(0,255,65,0.1); }
+  #content { max-width: 800px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div id="content">
+  <div class="nav">
+    <a href="/">← Back to Churchtown BC</a>
+  </div>
+  <h1>🎯 FPL Daily Analysis</h1>
+  <div class="meta">Team: Average Joe's | Last updated: <span id="updated">loading...</span></div>
+  <div id="analysis">
+    <p class="warn">Loading analysis...</p>
+  </div>
+  <div class="footer">
+    <p>Churchtown BC Web Portal | Data via Firecrawl | <span id="footer-ts"></span></p>
+  </div>
+</div>
+<script>
+  document.getElementById('updated').textContent = new Date().toLocaleString('en-GB', {day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  document.getElementById('footer-ts').textContent = new Date().toISOString();
+</script>
+</body>
+</html>
