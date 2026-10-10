@@ -426,6 +426,20 @@ table.fixtures td:nth-child(6) {
   width: 22%;
 }
 
+/* Phone: fit all eight fixture columns on screen (proportions match the desktop table) */
+@media (max-width: 480px) {
+  table.fixtures { table-layout: fixed; width: 100%; font-size: 0.62rem; }
+  table.fixtures th, table.fixtures td { padding: 4px 2px; min-width: 0; text-align: left; white-space: normal; word-break: break-word; line-height: 1.25; }
+  table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { width: 11%; } /* WC */
+  table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { width: 10%; } /* Match Week */
+  table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { width: 18%; } /* Match Date */
+  table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { width: 9%; }  /* Home / Away */
+  table.fixtures th:nth-child(5), table.fixtures td:nth-child(5) { width: 18%; } /* Opposition */
+  table.fixtures th:nth-child(6), table.fixtures td:nth-child(6) { width: 18%; } /* Venue */
+  table.fixtures th:nth-child(7), table.fixtures td:nth-child(7) { width: 7%; }  /* Time */
+  table.fixtures th:nth-child(8), table.fixtures td:nth-child(8) { width: 9%; }  /* Result */
+}
+
 /* Result dots (win / loss / draw) */
 td.result .dot { display: inline-block; width: 0.6em; height: 0.6em; border-radius: 50%; margin-left: 4px; vertical-align: middle; }
 td.result .dot.win { background: #2e7d32; }
