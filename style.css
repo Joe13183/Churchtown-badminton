@@ -393,6 +393,11 @@ footer {
   .hero-btns { flex-direction: column; align-items: center; }
   .btn { width: 100%; text-align: center; }
   .header-inner { flex-wrap: wrap; height: auto; padding: .75rem 4%; }
+  /* Phone: show the team buttons across the top (no menu button) */
+  .nav-toggle { display: none; }
+  .main-nav { position: static; max-height: none; overflow: visible; padding: 0; width: 100%; background: none; border-top: none; transition: none; }
+  .main-nav ul { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 4px; }
+  .main-nav a { display: inline-block; padding: 6px 9px; border-bottom: none; font-size: 0.78rem; }
   .site-title { font-size: 0.95rem; }
   
   /* Mobile table: show all columns, shrink where needed */
