@@ -431,15 +431,15 @@ table.fixtures td:nth-child(6) {
   .fixture-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   table.fixtures { table-layout: auto; width: 100%; font-size: 0.6rem; }
   table.fixtures th, table.fixtures td { padding: 3px 2px; text-align: left; white-space: normal; word-break: normal; line-height: 1.2; }
-  table.fixtures th { font-size: 0.5rem; letter-spacing: 0; }                                              /* smaller headers */
+  table.fixtures th { font-size: 0.55rem; letter-spacing: 0; }                                             /* headers */
   table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { white-space: nowrap; }                 /* WC */
-  table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { min-width: 64px; white-space: nowrap; } /* Match Week */
+  table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { min-width: 32px; width: 32px; }        /* Match Week */
   table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { white-space: nowrap; }                 /* Match Date */
-  table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { white-space: nowrap; }                 /* Home / Away */
+  table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { white-space: nowrap; width: 1px; }     /* Home / Away (H/A) */
   table.fixtures th:nth-child(5), table.fixtures td:nth-child(5) { min-width: 70px; }                     /* Opposition */
   table.fixtures th:nth-child(6), table.fixtures td:nth-child(6) { min-width: 110px; }                    /* Venue */
-  table.fixtures th:nth-child(7), table.fixtures td:nth-child(7) { white-space: nowrap; width: 1%; padding-left: 1px; padding-right: 1px; } /* Time */
-  table.fixtures th:nth-child(8), table.fixtures td:nth-child(8) { white-space: nowrap; width: 1%; padding-left: 1px; padding-right: 1px; } /* Result */
+  table.fixtures th:nth-child(7), table.fixtures td:nth-child(7) { white-space: nowrap; width: 1px; padding-left: 1px; padding-right: 1px; } /* Time */
+  table.fixtures th:nth-child(8), table.fixtures td:nth-child(8) { white-space: nowrap; width: 1px; padding-left: 1px; padding-right: 1px; } /* Result */
 }
 
 /* Result dots (win / loss / draw) */
