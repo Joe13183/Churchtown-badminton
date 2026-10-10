@@ -427,7 +427,7 @@ table.fixtures td:nth-child(6) {
 
   table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { width: 50px; white-space: nowrap; }  /* WC */
   table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { width: 60px; }                       /* Match Week (wraps) */
-  table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { width: 42px; white-space: normal; }  /* Match Date */
+  table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { width: 50px; white-space: normal; }  /* Match Date */
   table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { width: 28px; white-space: nowrap; }  /* H/A */
   table.fixtures th:nth-child(5), table.fixtures td:nth-child(5) { width: 50px; }                       /* Opposition (wraps) */
   table.fixtures th:nth-child(6), table.fixtures td:nth-child(6) { width: auto; }                       /* Venue (takes the rest) */
