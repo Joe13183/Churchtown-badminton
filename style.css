@@ -426,18 +426,19 @@ table.fixtures td:nth-child(6) {
   width: 22%;
 }
 
-/* Phone: fit all eight fixture columns on screen (proportions match the desktop table) */
+/* Phone: small text so the whole table fits the screen; people can pinch-zoom if needed */
 @media (max-width: 480px) {
-  table.fixtures { table-layout: fixed; width: 100%; font-size: 0.62rem; }
-  table.fixtures th, table.fixtures td { padding: 4px 2px; min-width: 0; text-align: left; white-space: normal; word-break: break-word; line-height: 1.25; }
-  table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { width: 11%; } /* WC */
-  table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { width: 10%; } /* Match Week */
-  table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { width: 18%; } /* Match Date */
-  table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { width: 9%; }  /* Home / Away */
-  table.fixtures th:nth-child(5), table.fixtures td:nth-child(5) { width: 18%; } /* Opposition */
-  table.fixtures th:nth-child(6), table.fixtures td:nth-child(6) { width: 18%; } /* Venue */
-  table.fixtures th:nth-child(7), table.fixtures td:nth-child(7) { width: 7%; }  /* Time */
-  table.fixtures th:nth-child(8), table.fixtures td:nth-child(8) { width: 9%; }  /* Result */
+  .fixture-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table.fixtures { table-layout: auto; width: 100%; font-size: 0.6rem; }
+  table.fixtures th, table.fixtures td { padding: 3px 2px; text-align: left; white-space: normal; word-break: normal; line-height: 1.2; }
+  table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { white-space: nowrap; }                 /* WC */
+  table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { min-width: 44px; }                      /* Match Week */
+  table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { white-space: nowrap; }                 /* Match Date */
+  table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { white-space: nowrap; }                 /* Home / Away */
+  table.fixtures th:nth-child(5), table.fixtures td:nth-child(5) { min-width: 70px; }                      /* Opposition */
+  table.fixtures th:nth-child(6), table.fixtures td:nth-child(6) { min-width: 70px; }                      /* Venue */
+  table.fixtures th:nth-child(7), table.fixtures td:nth-child(7) { white-space: nowrap; }                 /* Time */
+  table.fixtures th:nth-child(8), table.fixtures td:nth-child(8) { white-space: nowrap; }                 /* Result */
 }
 
 /* Result dots (win / loss / draw) */
