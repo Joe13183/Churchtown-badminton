@@ -431,3 +431,62 @@ td.result .dot { display: inline-block; width: 0.6em; height: 0.6em; border-radi
 td.result .dot.win { background: #2e7d32; }
 td.result .dot.loss { background: #c62828; }
 td.result .dot.draw { background: #9e9e9e; }
+
+/* League table (top of team pages) */
+.league-table {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 1rem 1rem 0.75rem;
+  margin: 0 0 1.75rem;
+  overflow-x: auto;
+}
+.league-table h3 {
+  margin: 0 0 .75rem;
+  color: var(--green-dark);
+  font-size: 1.05rem;
+  border-left: 4px solid var(--green-accent);
+  padding-left: .6rem;
+}
+.league-table-tbl { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.85rem; }
+.league-table-tbl thead th {
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 8px 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: .02em;
+}
+.league-table-tbl thead th:first-child { border-top-left-radius: 6px; }
+.league-table-tbl thead th:last-child { border-top-right-radius: 6px; }
+.league-table-tbl td {
+  padding: 7px 6px;
+  text-align: center;
+  color: var(--grey-dark);
+  border-bottom: 1px solid var(--grey-light);
+}
+.league-table-tbl th:nth-child(2), .league-table-tbl td:nth-child(2) { text-align: left; }
+.league-table-tbl td:last-child { font-weight: 700; color: var(--green-dark); }
+.league-table-tbl tbody tr:nth-child(even) { background: var(--off-white); }
+.league-table-tbl tbody tr:hover { background: var(--green-light); }
+.league-table-tbl tr.club-row td { background: var(--green-light); font-weight: 700; color: var(--green-dark); }
+.league-table-tbl tr.club-row td:first-child { box-shadow: inset 4px 0 0 var(--green-accent); }
+.league-table-note { font-size: 0.7rem; color: var(--grey-mid); margin: .5rem 0 0; }
+@media (max-width: 480px) {
+  .league-table { padding: .75rem .5rem .5rem; }
+  .league-table-tbl { font-size: 0.75rem; }
+  .league-table-tbl th, .league-table-tbl td { padding: 5px 3px; }
+  .league-table-tbl thead th { font-size: 0.68rem; }
+}
+
+/* Captain box (top of team pages) */
+.captain-box {
+  display: table;
+  margin: 0 auto 1.25rem;
+  background: #c3e6cb;
+  border-radius: 999px;
+  padding: 0.3rem 1.1rem;
+  text-align: center;
+}
+.captain-box p { margin: 0; font-size: .92rem; color: var(--grey-dark); }
