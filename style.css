@@ -421,9 +421,9 @@ table.fixtures td:nth-child(6) {
 /* Phone: small text, fixed column widths sized to their contents; Venue takes the remaining width */
 @media (max-width: 480px) {
   .fixture-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  table.fixtures { table-layout: fixed; width: 100%; font-size: 0.55rem; }
+  table.fixtures { table-layout: fixed; width: 100%; font-size: 0.5rem; }
   table.fixtures th, table.fixtures td { padding: 3px 1px; text-align: left; white-space: normal; word-break: normal; line-height: 1.2; }
-  table.fixtures th { font-size: 0.5rem; letter-spacing: 0; }
+  table.fixtures th { font-size: 0.45rem; letter-spacing: 0; }
 
   table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { width: 50px; white-space: nowrap; }  /* WC */
   table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { width: 30px; }                       /* Match Week (wraps) */
