@@ -393,20 +393,17 @@ footer {
   .hero-btns { flex-direction: column; align-items: center; }
   .btn { width: 100%; text-align: center; }
   .header-inner { flex-wrap: wrap; height: auto; padding: .75rem 4%; }
+  /* Phone: show the team buttons across the top (no menu button) */
+  .nav-toggle { display: none; }
+  .main-nav { position: static; max-height: none; overflow: visible; padding: 0; width: 100%; background: none; border-top: none; transition: none; }
+  .main-nav ul { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 4px; }
+  .main-nav a { display: inline-block; padding: 6px 9px; border-bottom: none; font-size: 0.78rem; }
   .site-title { font-size: 0.95rem; }
   
   /* Mobile table: show all columns, shrink where needed */
   table.fixtures { font-size: 0.75rem; }
   table.fixtures th, table.fixtures td { padding: 6px 4px; text-align: left; }
-  table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { min-width: 50px; } /* WC */
-  table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { min-width: 20px; word-break: break-word; white-space: normal; } /* Match Week */
-  table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { min-width: 35px; } /* Week */
-  table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { min-width: 85px; } /* Date */
-  table.fixtures th:nth-child(5), table.fixtures td:nth-child(5) { min-width: 50px; } /* H/A */
-  table.fixtures th:nth-child(6), table.fixtures td:nth-child(6) { min-width: 80px; } /* Opposition */
-  table.fixtures th:nth-child(7), table.fixtures td:nth-child(7) { min-width: 80px; } /* Venue */
-  table.fixtures th:nth-child(8), table.fixtures td:nth-child(8) { min-width: 45px; } /* Time */
-  
+  /* column widths: see the phone block below */
   .fixture-table-wrap { overflow-x: auto; border-radius: 0; margin: 1rem -4%; }
 }
 
@@ -424,6 +421,23 @@ table.fixtures td:nth-child(4) {
 table.fixtures th:nth-child(6),
 table.fixtures td:nth-child(6) {
   width: 22%;
+}
+
+/* Phone: small text, fixed column widths sized to their contents; Venue takes the remaining width */
+@media (max-width: 480px) {
+  .fixture-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table.fixtures { table-layout: fixed; width: 100%; font-size: 0.5rem; }
+  table.fixtures th, table.fixtures td { padding: 3px 1px; text-align: left; white-space: normal; word-break: normal; line-height: 1.2; }
+  table.fixtures th { font-size: 0.45rem; letter-spacing: 0; }
+
+  table.fixtures th:nth-child(1), table.fixtures td:nth-child(1) { width: 50px; white-space: nowrap; }  /* WC */
+  table.fixtures th:nth-child(2), table.fixtures td:nth-child(2) { width: 60px; }                       /* Match Week (wraps) */
+  table.fixtures th:nth-child(3), table.fixtures td:nth-child(3) { width: 50px; white-space: normal; }  /* Match Date */
+  table.fixtures th:nth-child(4), table.fixtures td:nth-child(4) { width: 28px; white-space: nowrap; }  /* H/A */
+  table.fixtures th:nth-child(5), table.fixtures td:nth-child(5) { width: 50px; }                       /* Opposition (wraps) */
+  table.fixtures th:nth-child(6), table.fixtures td:nth-child(6) { width: auto; }                       /* Venue (takes the rest) */
+  table.fixtures th:nth-child(7), table.fixtures td:nth-child(7) { width: 28px; white-space: nowrap; }  /* Time */
+  table.fixtures th:nth-child(8), table.fixtures td:nth-child(8) { width: 32px; white-space: nowrap; }  /* Result */
 }
 
 /* Result dots (win / loss / draw) */
