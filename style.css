@@ -425,3 +425,9 @@ table.fixtures th:nth-child(6),
 table.fixtures td:nth-child(6) {
   width: 22%;
 }
+
+/* Result dots (win / loss / draw) */
+td.result .dot { display: inline-block; width: 0.6em; height: 0.6em; border-radius: 50%; margin-left: 4px; vertical-align: middle; }
+td.result .dot.win { background: #2e7d32; }
+td.result .dot.loss { background: #c62828; }
+td.result .dot.draw { background: #9e9e9e; }
